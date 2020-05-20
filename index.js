@@ -17,13 +17,11 @@ bot.on('ready', () => {
 });
 
 bot.on('message', msg => {
-    if (msg.content.split(" ")[0] == ("[")) {
-        const args = msg.content.split(/ +/);
-        const command = args.slice(1).join(" ").toLowerCase();
+    if (msg.content.split("")[0] == ("[")) {
+        const args = msg.content.substring(1).split(/ +/);
+        const command = args[0].toLowerCase();
         console.info(`Called command: ${command}`);
-
         if (!bot.commands.has(command)) return;
-
         try {
             bot.commands.get(command).execute(msg, args);
         } catch (error) {

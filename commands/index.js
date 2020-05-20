@@ -1,4 +1,8 @@
 module.exports = {
     Ping: require('./ping'),
-    Covid: require('./covid')
+    Battle: require('./battle'),
+    Buy: require('./buy'),
+    Quest: require('./quest'),
+    Shop: require('./shop'),
+
 };

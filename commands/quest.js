@@ -1,8 +1,7 @@
 module.exports = {
-    name: 'ping',
-    description: 'Ping!',
+    name: 'quest',
+    description: 'Gain a quest',
     execute(msg, args) {
         console.log(args);
-        msg.reply('pong');
     },
 };
